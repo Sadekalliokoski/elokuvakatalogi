@@ -1,0 +1,198 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.app.light {
+  background-color: white;
+  color: black;
+}
+
+.app.dark {
+  background-color: black;
+  color: white;
+}
+
+.welcome {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.theme-btn {
+  display: block;
+  margin: 0 auto 24px auto;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.theme-btn:hover {
+  background: #222;
+  color: #fff;
+}
+
+.catalog-container {
+  padding: 32px 24px;
+  min-width: 600px;
+  max-width: 90vw;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* Light theme: white background, dark text */
+.app.light .catalog-container {
+  background: #fff;
+  color: #222;
+}
+
+/* Dark theme: dark background, white text */
+.app.dark .catalog-container {
+  background: #222;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  background: #444;
+  color: #fff;
+  flex: 1;
+}
+
+input::placeholder {
+  color: #bbb;
+}
+
+button {
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #444;
+}
+
+.elokuvalista ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.elokuvalista li {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.elokuvalista .delete-btn {
+  margin-left: 16px;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.elokuvalista .delete-btn:hover {
+  background: #444;
+}
+
+.username-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.username-form {
+  background: #222;
+  color: #fff;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+}
+
+.username-form input {
+  padding: 8px;
+  border: none;
+  font-size: 1rem;
+  background: #444;
+  color: #fff;
+  width: 180px;
+  margin-bottom: 12px;
+}
+
+.username-form button {
+  padding: 8px 24px;
+  border: none;
+  background: #fff;
+  color: #222;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.username-form button:hover {
+  background: #eee;
+}
